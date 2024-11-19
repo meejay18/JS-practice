@@ -295,25 +295,111 @@ console.clear();
 // console.log(dolphinScore, koalasScore);
 // checkWinner(dolphinScore, koalasScore);
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
-console.log(calcAverage(33, 50, 25));
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
+// console.log(calcAverage(33, 50, 25));
 
-let dolphinAverage = calcAverage(44, 23, 71);
-let koalasAverage = calcAverage(65, 54, 49);
-console.log(dolphinAverage, koalasAverage);
+// let dolphinAverage = calcAverage(44, 23, 71);
+// let koalasAverage = calcAverage(65, 54, 49);
+// console.log(dolphinAverage, koalasAverage);
 
-const checkWinner = (dolphinAverage, koalasAverage) => {
-  if (dolphinAverage >= 2 * koalasAverage) {
-    console.log(`dolphins win by 🏆🎯 ${dolphinAverage} to ${koalasAverage}`);
-  } else if (koalasAverage >= 2 * dolphinAverage) {
-    console.log(`koalas win🏆🎯 by ${koalasAverage} to ${dolphinAverage}`);
-  } else {
-    console.log("No team wins");
-  }
+// const checkWinner = (dolphinAverage, koalasAverage) => {
+//   if (dolphinAverage >= 2 * koalasAverage) {
+//     console.log(`dolphins win by 🏆🎯 ${dolphinAverage} to ${koalasAverage}`);
+//   } else if (koalasAverage >= 2 * dolphinAverage) {
+//     console.log(`koalas win🏆🎯 by ${koalasAverage} to ${dolphinAverage}`);
+//   } else {
+//     console.log("No team wins");
+//   }
+// };
+
+// checkWinner(dolphinAverage, koalasAverage);
+
+// dolphinAverage = calcAverage(85, 54, 41);
+// koalasAverage = calcAverage(23, 34, 27);
+// checkWinner(dolphinAverage, koalasAverage);
+
+// const friends = ["Micheal", "Steven", "Peter"];
+// console.log(friends[1]);
+// // console.log(friends[2]);
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
+
+// friends[2] = "jay";
+// console.log(friends);
+
+// const mije = [
+//   "mijoghene",
+//   "Digban",
+//   2008 - 1991,
+//   "software developer",
+//   friends,
+// ];
+// console.log(mije);
+
+// const calcAge = (birthYear) => {
+//   return 2047 - birthYear;
+// };
+
+// const years = [1990, 1967, 2002, 2010, 2018];
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age4 = calcAge(2035);
+// const age3 = calcAge(years[years.length - 1]);
+
+// const ages = [
+//   calcAge(years[0]),
+//   calcAge(years[1]),
+//   calcAge(years[years.length - 1]),
+// ];
+// console.log(ages);
+
+// push method
+const friends = ["Micheal", "Steven", "Peter"];
+const newLength = friends.push("Mije");
+console.log(friends);
+console.log(newLength);
+
+// unshift method
+friends.unshift("teks");
+console.log(friends);
+// pop method removes element from an array
+
+friends.pop();
+
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+// shift method
+
+const shifted = friends.shift();
+console.log(shifted);
+console.log(friends);
+
+console.log(friends.indexOf("Steven"));
+
+console.log(friends.includes("bob"));
+
+if (friends.includes("Steven")) {
+  console.log("You have a friend called Steven");
+} else {
+  console.log("You do not have a friend called Steven");
+}
+
+const billvalue = 125;
+const calcTip = (billvalue) => {
+  return `${billvalue}` >= 50 && `${billvalue}` <= 300
+    ? 0.15 * `${billvalue}`
+    : 0.2 * `${billvalue}`;
 };
 
-checkWinner(dolphinAverage, koalasAverage);
+console.log(calcTip(`${billvalue}`), `${billvalue}`);
 
-dolphinAverage = calcAverage(85, 54, 41);
-koalasAverage = calcAverage(23, 34, 27);
-checkWinner(dolphinAverage, koalasAverage);
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(tips);
+console.log(total);
