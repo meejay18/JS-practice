@@ -355,51 +355,113 @@ console.clear();
 // console.log(ages);
 
 // push method
-const friends = ["Micheal", "Steven", "Peter"];
-const newLength = friends.push("Mije");
-console.log(friends);
-console.log(newLength);
+// const friends = ["Micheal", "Steven", "Peter"];
+// const newLength = friends.push("Mije");
+// console.log(friends);
+// console.log(newLength);
 
-// unshift method
-friends.unshift("teks");
-console.log(friends);
-// pop method removes element from an array
+// // unshift method
+// friends.unshift("teks");
+// console.log(friends);
+// // pop method removes element from an array
 
-friends.pop();
+// friends.pop();
 
-const popped = friends.pop();
-console.log(popped);
-console.log(friends);
+// const popped = friends.pop();
+// console.log(popped);
+// console.log(friends);
 
-// shift method
+// // shift method
 
-const shifted = friends.shift();
-console.log(shifted);
-console.log(friends);
+// const shifted = friends.shift();
+// console.log(shifted);
+// console.log(friends);
 
-console.log(friends.indexOf("Steven"));
+// console.log(friends.indexOf("Steven"));
 
-console.log(friends.includes("bob"));
+// console.log(friends.includes("bob"));
 
-if (friends.includes("Steven")) {
-  console.log("You have a friend called Steven");
-} else {
-  console.log("You do not have a friend called Steven");
-}
+// if (friends.includes("Steven")) {
+//   console.log("You have a friend called Steven");
+// } else {
+//   console.log("You do not have a friend called Steven");
+// }
 
-const billvalue = 125;
-const calcTip = (billvalue) => {
-  return `${billvalue}` >= 50 && `${billvalue}` <= 300
-    ? 0.15 * `${billvalue}`
-    : 0.2 * `${billvalue}`;
+// const billvalue = 125;
+// const calcTip = (billvalue) => {
+//   return `${billvalue}` >= 50 && `${billvalue}` <= 300
+//     ? 0.15 * `${billvalue}`
+//     : 0.2 * `${billvalue}`;
+// };
+
+// console.log(calcTip(`${billvalue}`), `${billvalue}`);
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+// console.log(tips);
+// console.log(total);
+
+// const mije = {
+//   firstName: "mijoghene",
+//   surName: "Digban",
+//   age: 2037 - 2011,
+//   friends: ["teks", "Paul", "ezi"],
+//   job: "Software engineer",
+// };
+
+// console.log(mije);
+
+// console.log(mije.surName);
+// console.log(mije["job"]);
+
+// const Namekey = "Name";
+// console.log(mije["sur" + Namekey]);
+// console.log(mije["first" + Namekey]);
+
+// // console.log();
+
+// // const interestedIn = prompt(
+// //   "What do you want to know about mije? choose between friends, job , age, firstName, surname "
+// // );
+// // console.log(mije[interestedIn]);
+
+// mije.location = "ohio";
+// mije["twitter"] = "@meejayDigban";
+// console.log(mije);
+
+// // challenge
+
+// console.log(
+//   `${mije.firstName} has ${mije.friends.length} friends and one of them is ${mije.friends[0]}`
+// );
+
+const mije = {
+  firstName: "mijoghene",
+  surName: "Digban",
+  birthYear: 2037,
+  friends: ["teks", "Paul", "ezi"],
+  job: "Software engineer",
+  hasDriversLicense: true,
+
+  // calcAge: (birthYear) => {
+  //   return 2067 - birthYear;
+  // },
+  // calcAge: function () {
+  //   console.log(this);
+
+  //   return 2067 - this.birthYear;
+  // },
+
+  getSummary: function () {
+    console.log(this);
+    return `${this.firstName} is a  ${2070 - this.birthYear} year old ${
+      this.job
+    } and has ${this.hasDriversLicense ? "a" : "No"} drivers license   `;
+  },
 };
 
-console.log(calcTip(`${billvalue}`), `${billvalue}`);
-
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-
-const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
-
-console.log(tips);
-console.log(total);
+console.log(mije.getSummary());
+// console.log(mije["calcAge"](birthYear));
