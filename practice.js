@@ -465,3 +465,14 @@ const mije = {
 
 console.log(mije.getSummary());
 // console.log(mije["calcAge"](birthYear));
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+};
+const john = {
+  fullName: "Mark Miller",
+  mass: 92,
+  height: 1.95,
+};
