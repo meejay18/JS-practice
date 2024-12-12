@@ -455,56 +455,143 @@ const mije = {
   //   return 2067 - this.birthYear;
   // },
 
-  getSummary: function () {
-    console.log(this);
-    return `${this.firstName} is a  ${2070 - this.birthYear} year old ${
-      this.job
-    } and has ${this.hasDriversLicense ? "a" : "No"} drivers license   `;
-  },
+  //   getSummary: function () {
+  //     console.log(this);
+  //     return `${this.firstName} is a  ${2070 - this.birthYear} year old ${
+  //       this.job
+  //     } and has ${this.hasDriversLicense ? "a" : "No"} drivers license   `;
+  //   },
+  // };
+
+  // console.log(mije.getSummary());
+  // // console.log(mije["calcAge"](birthYear));
+
+  // const mark = {
+  //   fullName: "Mark Miller",
+  //   mass: 78,
+  //   height: 1.69,
+
+  //   calcBMI: function () {
+  //     this.bmi = this.mass / this.height ** 2;
+  //     return this.bmi;
+  //   },
+  // };
+  // const john = {
+  //   fullName: "Mark Miller",
+  //   mass: 92,
+  //   height: 1.95,
+
+  //   calcBMI: function () {
+  //     this.bmi = this.mass / this.height ** 2;
+  //     return this.bmi;
+  //   },
+  // };
+
+  // mark.calcBMI();
+  // john.calcBMI();
+
+  // console.log(mark.bmi, john.bmi);
+
+  // if (mark.bmi > john.bmi) {
+  //   console.log(
+  //     `${mark.fullName}'s bmi (${mark.bmi}) is higher than ${john.fullName}'s bmi(${john.bmi})`
+  //   );
+  // } else if (john.bmi > mark.bmi) {
+  //   console.log(
+  //     `${john.fullName}'s bmi (${john.bmi}) is higher than ${mark.fullName}'s bmi(${mark.bmi})`
+  //   );
+  // }
+
+  // // For loop
+  // // keeps running while the condition is true
+
+  // for (let rep = 1; rep <= 10; rep++) {
+  //   console.log(`jogging everyday repetition ${rep}🚀🚀🚀🚀 `);
+  // }
+
+  // const mijeArray = [
+  //   "mijoghene",
+  //   "Digban",
+  //   2008 - 1991,
+  //   "software developer",
+  //   ["teks", "uri", "ru"],
+  //   true,
+  // ];
+
+  // const types = [];
+
+  // for (let i = 0; i < mijeArray.length; i++) {
+  //   console.log(mijeArray[i], typeof mijeArray[i]);
+
+  //   // types[i] = typeof mijeArray[i];
+
+  //   types.push(typeof mijeArray[i]);
+  // }
+
+  // console.log(types);
+
+  // const ages = [];
+
+  // for (let i = 0; i < years.length; i++) {
+  //   ages.push(2037 - years[i]);
+  // }
+  // console.log(ages);
+
+  // // continue and break
+  // for (let i = 0; i < mijeArray.length; i++) {
+  //   if (typeof mijeArray[i] !== "string") continue;
+  //   console.log(mijeArray[i], typeof mijeArray[i]);
+  // }
+
+  // for (let i = 0; i < mijeArray.length; i++) {
+  //   if (typeof mijeArray[i] === "number") break;
+  //   console.log(mijeArray[i], typeof mijeArray[i]);
 };
 
-console.log(mije.getSummary());
-// console.log(mije["calcAge"](birthYear));
+console.clear();
 
-const mark = {
-  fullName: "Mark Miller",
-  mass: 78,
-  height: 1.69,
+// const years = [1991, 2007, 2020, 1995];
+// const IdCard = ["bisi", 2037 - 1995, "graduate", ["tj", "kemi", "bola"], true];
 
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
-const john = {
-  fullName: "Mark Miller",
-  mass: 92,
-  height: 1.95,
+// const ages2 = [];
+// const number = ["you", 1885, "mije", 2003];
 
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
+// for (let i = 0; i < number.length; i++) {
+//   if (typeof number[i] === "string") continue;
+//   ages2.push(2050 - years[i]);
 
-mark.calcBMI();
-john.calcBMI();
+//   console.log(number[i], typeof number[i]);
 
-console.log(mark.bmi, john.bmi);
+//   // console.log(IdCard[i]);
+//   // console.log(ages2);
+// }
 
-if (mark.bmi > john.bmi) {
-  console.log(
-    `${mark.fullName}'s bmi (${mark.bmi}) is higher than ${john.fullName}'s bmi(${john.bmi})`
-  );
-} else if (john.bmi > mark.bmi) {
-  console.log(
-    `${john.fullName}'s bmi (${john.bmi}) is higher than ${mark.fullName}'s bmi(${mark.bmi})`
-  );
+const mijeArray = [
+  "mijoghene",
+  "Digban",
+  2008 - 1991,
+  "software developer",
+  ["teks", "uri", "ru"],
+  true,
+];
+
+// 4, 3,2,1
+
+for (let i = mijeArray.length - 1; i >= 0; i--) {
+  console.log(i, mijeArray[i]);
 }
 
-// For loop
-// keeps running while the condition is true
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`---------starting exercise ${exercise} 🏋️`);
 
-for (let rep = 1; rep <= 10; rep++) {
-  console.log(`jogging everyday repetition ${rep}🚀🚀🚀🚀 `);
+  for (let workout = 1; workout < 6; workout++) {}
+}
+
+// while loop
+let rep = 1;
+while (rep <= 10) {
+  console.log(
+    `this round needs at least ${rep} rep(s) to move to the next round`
+  );
+  rep++;
 }
