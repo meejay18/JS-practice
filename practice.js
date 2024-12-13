@@ -196,14 +196,14 @@ const prompt = require("prompt-sync")();
 // console.log(`only when it shows ${age >= 18 ? "passed" : "did not pass"}`);
 // console.clear();
 
-const bill = 430;
-const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-console.log(
-  `The bill was ${bill}, the tip was ${tip}, and the total value was ${
-    tip + bill
-  }`
-);
-console.clear();
+// const bill = 430;
+// const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// console.log(
+//   `The bill was ${bill}, the tip was ${tip}, and the total value was ${
+//     tip + bill
+//   }`
+// );
+// console.clear();
 // FUNCTIONS
 // function logger() {
 //   console.log("My name is mije");
@@ -595,3 +595,36 @@ while (rep <= 10) {
   );
   rep++;
 }
+
+const calcTip = (billvalue) => {
+  return `${billvalue}` >= 50 && `${billvalue}` <= 300
+    ? 0.15 * `${billvalue}`
+    : 0.2 * `${billvalue}`;
+};
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+
+  totals.push(bills[i] + tip);
+}
+
+console.log(bills, tips, totals);
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+    // sum = sum + arr[i]
+  }
+
+  return sum / arr.length;
+};
+
+// console.log(calcAverage([3, 7, 5]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
