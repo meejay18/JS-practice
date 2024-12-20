@@ -13,35 +13,44 @@
 // const f = createHelloWorld();
 // console.log(f());
 
-const createHelloWorld = () => {
-  const hello = () => {
-    return "hello world";
-  };
-  return hello;
-};
+// const createHelloWorld = () => {
+//   const hello = () => {
+//     return "hello world";
+//   };
+//   return hello;
+// };
 
-const f = createHelloWorld();
-console.log(f());
+// const f = createHelloWorld();
+// console.log(f());
 
-// challenge
+// // challenge
 
-const temperatures = [43, 20, -9, 30, -3, "error", 3, 7];
+// const createTempAmp = (arr1, arr2) => {
+//   let addArray = arr1.concat(arr2);
 
-const createTempAmp = (arr1, arr2) => {
-  let addArray = arr1.concat(arr2);
+//   let max = addArray[0];
+//   let min = addArray[0];
 
-  let max = addArray[0];
-  let min = addArray[0];
+//   for (let i = 0; i < addArray.length; i++) {
+//     let curTemp = addArray[i];
 
-  for (let i = 0; i < addArray.length; i++) {
-    let curTemp = addArray[i];
+//     if (typeof curTemp !== "number") continue;
+//     if (curTemp > max) max = curTemp;
+//     if (curTemp < min) min = curTemp;
+//   }
+//   console.log(max, min);
+//   return max - min;
+// };
+// let amplitude = createTempAmp([1, 3, -6], [9, 5, 3]);
+// console.log(amplitude);
 
-    if (typeof curTemp !== "number") continue;
-    if (curTemp > max) max = curTemp;
-    if (curTemp < min) min = curTemp;
+const temps = [17, 23, 21];
+const printForecast = (arr) => {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += ` ${arr[i]}oc in ${i + 1}day[s]...`;
   }
-  console.log(max, min);
-  return max - min;
+  console.log(`...` + str);
 };
-let amplitude = createTempAmp([1, 3, -6], [9, 5, 3]);
-console.log(amplitude);
+
+printForecast(temps);
